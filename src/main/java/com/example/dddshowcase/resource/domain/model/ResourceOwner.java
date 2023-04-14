@@ -12,20 +12,25 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "resource_referential")
+@Table(name = "resource_owner")
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResourceReferential {
+public class ResourceOwner {
+
     @Id
     private UUID id;
 
     @Column(nullable = false)
-    private UUID defaultResourceOwner;
+    private UUID resourceId;
 
     @Column(nullable = false)
-    private String name;
+    private UUID userId;
 
-    public Resource onboard() {
-        return Resource.makeResource(this.id, this.name);
+    public static ResourceOwner createNew(UUID resourceId, UUID userId) {
+        return new ResourceOwner(
+                UUID.randomUUID(),
+                resourceId,
+                userId
+        );
     }
 }
