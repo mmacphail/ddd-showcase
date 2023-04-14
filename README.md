@@ -1,5 +1,5 @@
 <h1 align="center">Welcome to ddd-showcase 👋</h1>
-<p>The goal of this project is to demonstrate why ddd models are importants</p>
+<p>The goal of this project is to demonstrate why ddd models are important</p>
 
 # Demo use case
 
@@ -95,6 +95,15 @@ Please note that we could separate in the domain layer using DDD modules.<br>
 Then, we can work on the Application Services.
 
 *Code demo*
+
+You can use eventing to separate the domain even more cleanly.
+
+*Code demo*
+
+## Thinking in models
+
+Once your model is defined, you can refine it, integrating new business rules.
+During Sprint Refinement, use the domain model class diagram to help you understand what needs to be changed in the model. This is a very powerful communication tool.
 
 ## Show your support
 
