@@ -1,5 +1,6 @@
 package com.example.dddshowcase.resources.domain.model;
 
+import com.example.dddshowcase.ddd.Aggregate;
 import com.example.dddshowcase.resources.domain.model.Resource;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +16,7 @@ import java.util.UUID;
 @Table(name = "resource_referential")
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResourceReferential {
+public class ResourceReferential implements Aggregate {
     @Id
     private UUID id;
     @Column(nullable = false)
