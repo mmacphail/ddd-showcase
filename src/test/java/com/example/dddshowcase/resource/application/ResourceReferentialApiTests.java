@@ -1,6 +1,6 @@
 package com.example.dddshowcase.resource.application;
 
-import com.example.dddshowcase.resource.domain.model.TestFixtures;
+import com.example.dddshowcase.resources.domain.model.TestFixtures;
 import com.example.dddshowcase.resources.application.ResourceReferentialApi;
 import com.example.dddshowcase.resources.domain.model.Resource;
 import com.example.dddshowcase.resources.domain.model.ResourceReferentialRepository;

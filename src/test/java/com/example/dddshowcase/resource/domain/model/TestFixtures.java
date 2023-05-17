@@ -1,4 +1,4 @@
-package com.example.dddshowcase.resource.domain.model;
+package com.example.dddshowcase.resources.domain.model;
 
 import com.example.dddshowcase.resources.domain.model.Resource;
 import com.example.dddshowcase.resources.domain.model.ResourceReferential;

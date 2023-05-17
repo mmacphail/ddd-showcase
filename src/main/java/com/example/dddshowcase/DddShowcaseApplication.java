@@ -1,5 +1,6 @@
 package com.example.dddshowcase;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DddShowcaseApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DddShowcaseApplication.class, args);
+        SpringApplication app = new SpringApplication(DddShowcaseApplication.class);
+        app.setBannerMode(Banner.Mode.OFF);
+        app.run(args);
     }
 
 }
