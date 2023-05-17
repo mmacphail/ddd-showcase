@@ -1,0 +1,22 @@
+version: '3.10'
+services:
+  grafana:
+    image: "grafana/grafana:8.1.5"
+    environment:
+      GF_PATHS_DATA : /var/lib/grafana
+      GF_SECURITY_ADMIN_PASSWORD : kafka
+    volumes:
+      - ./etc/grafana/provisioning:/etc/grafana/provisioning
+    container_name: grafana
+    network_mode: host
+    depends_on:
+      - prometheus
+
+  prometheus:
+    image: "prom/prometheus:v2.28.1"
+    volumes:
+      - ./etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command: "--config.file=/etc/prometheus/prometheus.yml"
+    container_name: prometheus
+    network_mode: host
+
